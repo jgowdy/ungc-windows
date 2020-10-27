@@ -12,10 +12,7 @@ pool:
 steps:
 - checkout: self
   submodules: true
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- powershell: git checkout --recurse-submodules 85.0.4183.121-1.1
+- powershell: py build.py
+- powershell: py package.py
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'

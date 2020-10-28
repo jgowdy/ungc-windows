@@ -21,7 +21,7 @@ jobs:
       versionSpec: '2.7' 
       addToPath: true 
       architecture: 'x64'
-  - powershell: pip install pypiwin32 
-    timeoutInMinutes: 360
+  - powershell: pip install pypiwin32     
   - powershell: py build.py
+    timeoutInMinutes: 360
   - powershell: py package.py

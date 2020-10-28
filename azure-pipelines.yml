@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 jobs:
-- job: Build ungc
+- job: ungcBuild
   timeoutInMinutes: 360
   steps:
   - checkout: self

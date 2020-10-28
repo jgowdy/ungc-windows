@@ -22,5 +22,6 @@ jobs:
       addToPath: true 
       architecture: 'x64'
   - powershell: pip install pypiwin32 
+    timeoutInMinutes: 360
   - powershell: py build.py
   - powershell: py package.py

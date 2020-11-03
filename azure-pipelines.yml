@@ -12,11 +12,11 @@ pool:
 
 jobs:
 - job: ungcBuild
-  timeoutInMinutes: 360
+  timeoutInMinutes: 9000
   steps:
   - checkout: self
     submodules: true
   - powershell: git checkout --recurse-submodules 85.0.4183.121-1.1    
   - powershell: py build.py
-    timeoutInMinutes: 360
+    timeoutInMinutes: 9000
   - powershell: py package.py

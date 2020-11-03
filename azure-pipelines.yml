@@ -16,8 +16,7 @@ jobs:
   steps:
   - checkout: self
     submodules: true
-  - powershell: git checkout --recurse-submodules 85.0.4183.121-1.1
-  - powershell: pip install pypiwin32     
+  - powershell: git checkout --recurse-submodules 85.0.4183.121-1.1    
   - powershell: py build.py
     timeoutInMinutes: 360
   - powershell: py package.py

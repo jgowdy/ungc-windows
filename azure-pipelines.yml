@@ -16,7 +16,7 @@ jobs:
   steps:
   - checkout: self
     submodules: true
-  - powershell: git checkout --recurse-submodules 86.0.4240.111-1    
+  - powershell: git checkout --recurse-submodules 
   - powershell: py build.py
     timeoutInMinutes: 9000
   - powershell: py package.py

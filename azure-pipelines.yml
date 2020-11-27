@@ -17,8 +17,7 @@ jobs:
   - checkout: self
     submodules: true
   - powershell: wget -UseBasicParsing -O .\Set-PSpriority.ps1 https://gallery.technet.microsoft.com/scriptcenter/Set-the-process-priority-9826a55f/file/139715/1/Set-PSpriority.ps1
-  - powershell: .\Set-PSpriority.ps1 -1
   - powershell: git checkout --recurse-submodules 
-  - powershell: py build.py
+  - powershell: .\Set-PSpriority.ps1 -1 ; py build.py
     timeoutInMinutes: 9000
   - powershell: py package.py
